@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Serena · Prenatal Pilates</title>
+  <meta name="description" content="Gentle prenatal Pilates at home, with voice guidance in English and Spanish.">
+
+  <link rel="apple-touch-icon" href="/icon-180.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Serena">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <main class="view" id="view" tabindex="-1"></main>
+
+    <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
+  </div>
+
+  <!-- Workout detail / equipment sheet -->
+  <div class="sheet-wrap" id="sheet" hidden>
+    <div class="sheet-scrim" data-act="close-top"></div>
+    <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <div class="sheet-body" id="sheet-body"></div>
+    </section>
+  </div>
+
+  <!-- Safety / warning signs modal -->
+  <div class="modal-wrap" id="modal" hidden>
+    <div class="sheet-scrim" data-act="close-top"></div>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="modal-body"></section>
+  </div>
+
+  <!-- Full-screen workout player -->
+  <section class="player" id="player" hidden aria-label="Workout player"></section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
